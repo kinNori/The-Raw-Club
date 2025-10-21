@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    z-index: 0;
+    background-color: white; /* au cas où l'image ne charge pas */
+    color: white; /* texte par défaut plus lisible */
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #12096475;
+}
+nav h1{
+    color: #717171;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+nav .onglets{
+    margin-top: 3px;
+    margin-left: 300px;
+}
+nav .onglets a{
+    text-decoration: none;
+    color: #000;
+    margin-right: 10px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    color: rgb(22, 3, 3);
+    padding: 40px;
+}
+header h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+}
+header h4{
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgb(243, 9, 9);
+}
+header button{
+    padding: 10px 20px;
+    background-color: rgb(228, 225, 225);
+    color:rgb(29, 141, 63);
+    border:none;
+    margin-bottom: 30px;
+    outline:none;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+}
+.main{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .content .card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:20px;
+}
+.main .content .card .left{
+   flex: 0 0 30%;
+   padding: 20px;
+   background-color:black;
+   color:#fff;
+}
+.main .content .card .right img{
+    height:300px;
+    width: 400px;
+    margin-top: 5px;
+}
+footer{
+    margin-top: 40px;
+    border-top: 5px solid #12096475;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 30px 100px;;
+}
+footer h1{
+    font-family: 'Playfair Display', serif;
+    border-bottom: 1px solid white;
+    width: 12%;
+    padding-bottom: 5px;
+}
+footer .services{
+    margin-top: -10px;
+    display:flex;
+    flex-wrap:wrap;
+}
+footer .services .service{
+    margin-right: 30px;
+}
+footer .services .service p{
+    max-width: 300px;
+}
+footer #contact{
+    color: rgb(181, 181, 181);
+}
+@media screen and (max-width:680px){
+    nav .onglets {
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .main .card {
+        margin: 10px;
+    }
+    .main .content .card .right img{
+        height:200px;
+        width: 100%;
+        margin-top: -0px;
+    }
+    .main .content .card{
+        display: block;
+    }
+    footer{
+        padding: 30px;
+    }
+}
+
+h1{
+	color : rgb(226, 121, 121);
+	font-size : 35px;
+}
+h2{
+	color : black;
+	font-size : 30px;
+}
+h3{
+	color : white;
+}
+h4{
+	color : rgb(10, 17, 114);
+}
+h5{
+	color : rgb(4, 54, 83);
+}
+h6{
+	color : green;
+	font-size : 12px;
+}
+
+#events .card, 
+#events .events-grid {
+    position: relative;
+    z-index: 2; /* pour que le contenu soit au-dessus du filtre */
+}
+
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #12096475;
+}
+nav h1{
+    color: #717171;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+
+.section p{
+	color : white;
+	font-family : 'Open Sans', Gill Sans Nova Cond;
+	font-size : 15px;
+}
+
+img {
+  margin: 0 auto;
+}
+
+[required] {
+   border: 2px dotted red;
+}
+
+/* === EVENTS GRID & CARDS === */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 20px;
+}
+.div article {
+    background-color: white;
+}
+/* card */
+.event-card {
+  background: linear-gradient(180deg, rgba(255,0,153,0.04), rgba(0,0,0,0.25));
+  border: 1px solid rgba(255, 0, 153, 0.18);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .28s ease, box-shadow .28s ease;
+  outline: none;
+}
+
+.event-card:focus,
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(255, 0, 153, 0.12), 0 0 40px rgba(204, 0, 255, 0.08);
+  border-color: rgba(255, 51, 204, 0.5);
+}
+
+/* date badge */
+.event-date {
+  display: inline-block;
+  background: rgba(255, 51, 204, 0.12);
+  color: #b71c83;
+  border: 1px solid rgba(255, 51, 204, 0.18);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* title & description */
+.event-card h3 {
+  margin: 6px 0 10px;
+  font-size: 1.15rem;
+  color: #510446;
+}
+
+.event-card p {
+  color: #db4d7c;
+  line-height: 1.45;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+/* footer meta (price + CTA) */
+.event-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.event-meta span {
+  font-weight: 600;
+  color: #4a0337;
+  font-size: 0.95rem;
+}
+
+/* CTA button inside card */
+.event-cta {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 51, 204, 0.35);
+  background: transparent;
+  color: #750559;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.event-cta:hover,
+.event-cta:focus {
+  background: #80787d;
+  color: #050010;
+  box-shadow: 0 6px 20px rgba(255, 51, 204, 0.18);
+}
+
+/* small responsive tweaks */
+@media (max-width: 480px) {
+  .event-card p { font-size: 0.9rem; }
+  nav ul { gap: 18px; }
+}
+
+body::before {
+    content: "";
+    position: fixed;        /* couvre toute la fenêtre */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("Scenes/global.png") no-repeat center center;
+    background-size: cover;
+    opacity: 0.35;          /* transparence de l’image */
+    filter: blur(4px) brightness(0.7); /* flou + léger assombrissement */
+    z-index: -2;
+}
+
+/* Couche de flou clair sur le contenu (effet "verre dépoli") */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px); /* flou du fond derrière le texte */
+    -webkit-backdrop-filter: blur(4px);
+    z-index: -1;
+}
+
+.event-card {
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #1a1a1a; /* texte foncé pour contraste */
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+/* Ajustement des textes dans les cartes */
+.event-card h3, 
+.event-card p, 
+.event-card span {
+  color: #1a1a1a;
+}
+
+.event-card .event-date {
+  background-color: rgba(255, 51, 204, 0.1);
+  color: #b71c83;
+}
